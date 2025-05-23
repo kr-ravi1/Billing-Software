@@ -11,14 +11,12 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@CrossOrigin
-@RequestMapping("/categories")
 public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
 
-    @PostMapping
+    @PostMapping("/admin/categories")
     @ResponseStatus(HttpStatus.CREATED)
     public CategoryResponse addCategory(@RequestBody CategoryRequest request) {
         return categoryService.add(request);
@@ -30,7 +28,7 @@ public class CategoryController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @DeleteMapping("/{categoryId}")
+    @DeleteMapping("/admin/categories/{categoryId}")
     public void delete(@PathVariable String categoryId) {
         try {
             categoryService.delete(categoryId);
