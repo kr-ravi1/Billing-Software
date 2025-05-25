@@ -22,7 +22,7 @@ public class CategoryController {
         return categoryService.add(request);
     }
 
-    @GetMapping
+    @GetMapping("/categories")
     public List<CategoryResponse> fetchCategories() {
         return categoryService.read();
     }
