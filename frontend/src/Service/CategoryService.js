@@ -16,7 +16,7 @@ export const deleteCategory = async (categoryId) => {
 }
 
 export const fetchCategories = async () => {
-  return await axios.get('http://localhost:8080/categories', 
+  return await axios.get(`${import.meta.env.VITE_BACKEND_URL}/categories`, 
     {headers : {
       'Authorization' : `Bearer ${localStorage.getItem('token')}`
     }}
