@@ -65,6 +65,7 @@ const Login = () => {
                                     className='form-control'
                                     onChange={onChangeHandler}
                                     value={data.email}
+                                    required
                                 />
                             </div>
                             <div className="mb-4">
@@ -76,6 +77,7 @@ const Login = () => {
                                     className='form-control'
                                     onChange={onChangeHandler}
                                     value={data.password}
+                                    required
                                 />
                             </div>
                             <div className="d-grid">
